@@ -1,0 +1,699 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic:700&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:700');
+
+/* RESET */
+html,body,
+h1,h2,h3,h4,h5,h6,
+div,ul,ol,li,p,span,
+table,tr,td,thead,tbody,tfoot {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    border: 0;
+}
+button {
+    margin: 0;
+    padding: 0;    
+    border: 0;
+}
+table,td {
+    border-spacing: 0;
+}
+
+body {
+    width: 100%;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 700;
+}
+button {
+    background:transparent;
+    cursor:pointer;
+    overflow:visible;
+}
+ul,ol,li {
+    list-style: none;
+}
+
+.clear {
+    clear: both;
+}
+.color_ktx13 {
+    color: #35a3dc !important;
+}
+.color_ktx37 {
+    color: #f7b22e !important;
+}
+
+.indent {
+    text-align: left !important;
+    padding-left: 15px;
+}
+.front,.middle,.end {
+    font-family: 'Open Sans';
+    font-weight: 700;
+}
+/* container */
+div[class*="container"] {
+    margin: 0 auto;
+    padding-bottom: 35px;
+}
+
+.mtr_container {
+    width: 1730px;
+}
+.mtr_container::after {
+    content: '';
+    clear: both;
+}
+.mtr_chart_container {
+    width: 1536px;
+}
+.mtr_flow_container {
+    width: 1727px;
+}
+.mtr_map_container {
+    width: 1728px;    
+}
+.pop_title {
+    padding-top: 15px;
+    padding-left: 30px;
+    margin: 0;
+    width: 100%;
+    height: 54px;
+    background-color: #ededed;
+}
+/* mtr1 */
+
+.mtr_table div[class*="ktx_"] h4 {
+    width: 200px;
+    height: 87px;
+    float: left;
+    font-size: 30px;    
+    color: #fff;    
+    padding:25px 0 0 31px;   
+    background-image: url('../images/icon_train.png');
+    background-repeat: no-repeat;
+    background-position-x: 28px;
+    background-position-y: 30px;
+}
+
+.mtr_table {    
+    width: 100%;
+    margin: 30px 0;
+    color: #4f5355;
+}
+.mtr_table td.average {
+    width: 100px !important;
+    font-size: 25px;
+}
+.mtr_table div.ktx_13 h4 {
+    background-color: #35a4dc;
+}
+.mtr_table div.ktx_37 h4 {
+    background-color: #ebbf10;
+}
+.mtr_table div.ktx_13 div table tr:last-child th,
+.mtr_table div.ktx_13 table tr:last-child td {
+    color: #1a97d7;
+}
+.mtr_table div.ktx_37 table tr:last-child th,
+.mtr_table div.ktx_37 table tr:last-child td {
+    color: #e77d00;
+}
+.mtr_table div.ktx_37 table tr:last-child td.average {
+    color: #dd3c3c;
+}
+
+.mtr_table div[class*="ktx_"] table {
+    width: 1529px;
+    float: left;
+    z-index: 2;
+    position: relative;
+}
+.mtr_table div[class*="ktx_"] table th,
+.mtr_table div[class*="ktx_"] table td {
+    width: 67px;
+    height: 43px;
+}
+.mtr_table div[class*="ktx_"] table th {
+    border-right: 1px solid #585858;
+    font-size: 19px;    
+}
+.mtr_table div[class*="ktx_"] table td {
+    border-left: 1px solid #e2e2e2;
+    height: 43px;
+}
+.mtr_table div[class*="ktx_"] table td:first-child {
+    border: 0;
+}
+.mtr_table div[class*="ktx_"] div.bg_bar_full {
+    width: 1530px;
+    margin-left: 200px;
+    margin-top: 18px;
+    position: absolute;
+    z-index: 1;
+}
+.mtr_table div[class*="ktx_"] div.bg_bar_full div.bg_bar {
+    height: 11px; position: relative;
+}
+.mtr_table div[class*="ktx_"] div.bg_bar_full div.bg_bar:nth-child(1) { background: #dedede; }
+.mtr_table div[class*="ktx_"] div.bg_bar_full div.bg_bar:nth-child(2) { background: #d2e9f7; margin-top: 33px; }
+.mtr_table div[class*="ktx_"] div.bg_bar_full div.bg_bar:nth-child(3) { background: #dedede; margin-top: 67px; }
+.mtr_table div[class*="ktx_"] div.bg_bar_full div.bg_bar:nth-child(4) { background: #f9edd5; margin-top: 33px; }
+
+.mtr_table div[class*="ktx_"]::after {
+    content: '';
+    clear:both;
+    display: block;
+}
+.mtr_table .train table {
+    width: 100%;    
+}
+.mtr_table .train table td:first-child {
+    width: 271px;
+}
+.mtr_table .train table td.front,.mtr_table .train table td.middle,.mtr_table .train table td.end,
+.chart_train td.front,.chart_train td.middle,.chart_train td.end {
+    background-repeat: no-repeat;    
+    text-align: center;
+    font-size: 19px;
+    color: #222;
+}
+.mtr_table .train table td.front,
+.mtr_table .train table td.middle,
+.mtr_table .train table td.end {
+    width: 68px;
+    height: 32px;
+}
+.chart_train td.front,
+.chart_train td.middle,
+.chart_train td.end {
+    width: 68px;
+    height: 43px;
+    background-position: center 7px;
+}
+.mtr_table .train table td.front,.chart_train td.front {
+    background-image:url('../images/ktx_front.png');
+    padding-left: 10px;
+}
+.mtr_table .train table td.middle,.chart_train td.middle {
+    background-image:url('../images/ktx_middle.png');
+}
+.mtr_table .train table td.end,.chart_train td.end {
+    background-image:url('../images/ktx_end.png');
+    padding-right: 15px;
+}
+.mtr_table h4,
+.mtr_table div[class*="ktx_"] table th,
+.mtr_table div[class*="ktx_"] table td,
+.mtr_table .average {
+    text-align: center;
+}
+.mtr_view {
+    width:100%;
+    background: #444549;
+    font-size: 13px;
+    padding: 30px 0 0 173px;
+}
+.mtr_view::after {
+    content: '';
+    clear:both;
+    display: block;
+}
+.mtr_view table.info {
+    position: absolute;
+    margin-left: 1552px;
+    margin-top: 7px;
+}
+.mtr_view table.info td {
+    color: #fff;
+    width: 53px;    
+    height: 23px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 0;
+}
+.mtr_view table.info td:last-child {
+    padding-left: 8px;
+}
+.mtr_view div[class*="train_"] {
+    margin: 5px 0;
+    height: 28px;
+    border-left:2px solid #000;
+    border-top: 3px solid #000;
+    background:#25262b;
+}
+.mtr_view div[class*="train_"] p {
+    position: absolute;
+    width: 95px;   
+    padding-top: 5px; 
+    letter-spacing: -1px;
+    color: #d4d4d6;
+}
+.mtr_view div[class*="train_"] span {
+    color: #4356bf;
+    display: block;
+    padding-top: 5px;
+    padding-left: 7px;
+    width: 42px;
+    float: left;
+}
+.mtr_view div[class*="train_"] div {
+    float:left;
+    width: 180px;
+    text-align: center;
+}
+.mtr_view div[class*="train_"] p.first {
+    margin-left: -105px;
+    text-align: right;
+}
+.mtr_view div[class*="train_"] p.last {
+    margin-left: 240px;
+    text-align: left;
+}
+
+.mtr_view .train_long {
+    width: 1350px;    
+}
+.mtr_view .train_long p.last {
+    margin-left: 1360px !important;
+}
+.mtr_view .train_long p.after {
+    margin-left: 1435px;
+    padding-left: 25px;
+    color: #87888c;
+    background-image: url('../images/dot.gif');
+    background-repeat: no-repeat;
+    background-position-y: center;
+}
+.mtr_view .train_long .assembly {
+    width: 1300px;
+}
+.mtr_view .train_long .assembly table {
+    margin: 0 auto;
+}
+.mtr_view .train_long .assembly table tr td {
+    width: 55px;
+    height: 23px;
+    text-align: center;
+}
+.mtr_view .front,.mtr_view .middle,.mtr_view .end {
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-size: 14px;
+    text-shadow: #222 1px 1px;
+}
+.mtr_view .front {
+    background-image:url('../images/ktx_mini_front.png');
+    padding-left: 10px;
+}
+.mtr_view .middle {
+    background-image:url('../images/ktx_mini_middle.png');
+}
+.mtr_view .end {
+    background-image:url('../images/ktx_mini_end.png');
+    padding-right: 10px;
+}
+.mtr_view .train_short {
+    width: 228px;
+}
+.mtr_view div[class*="layout_"] .group_short {
+    width: 236px;
+    margin-bottom: 38px;
+}
+.mtr_view div[class*="layout_"] {
+    float: left;
+}
+.mtr_view .layout_middle_left {
+    margin-left: 134px;
+}
+.mtr_view .layout_middle_right {
+    margin-left: -228px;
+}
+.mtr_view .layout_right {
+    margin-left: 280px;
+}
+.mtr_view div[class*="train_middle"] {
+    width: 464px;
+}
+.mtr_view .train_middle_first {    
+    margin-top: -33px !important;
+}
+button.mtr_btn {
+    position: absolute;
+    width: 164px;
+    height: 45px;
+    margin-left: 139px;
+    margin-top: 583px;
+}
+
+/* mtr2 */
+table.chart_ktx13 tr.chart_title td {
+    padding-top: 30px;
+}
+table.chart_ktx37 tr.chart_title td {
+    padding-top: 50px;
+}
+table[class*="chart_ktx"] tr.chart_title td {
+    width: 100%;
+    text-align: center;    
+    padding-bottom: 25px;
+    font-size: 22px !important;
+    border-right: 0 !important;
+}
+table[class*="chart_ktx"] {
+    width: 100%;
+}
+table[class*="chart_ktx"] tr td {    
+    height: 35px;
+    width: 70px;
+    text-align: center;
+    font-size: 13px;
+}
+table[class*="chart_ktx"] tr td.chart_info {
+    vertical-align: top !important;
+    width: 85px;
+}
+table[class*="chart_ktx"] tr td.chart_info,
+table[class*="chart_ktx"] tr td.all {
+    text-align: left;
+    color: #9b9ea0 !important;
+    border-top: 0px !important;
+}
+table[class*="chart_ktx"] tr.chart_train {
+    color: #7b7f81;
+    background: #f3f4f5;
+}
+table[class*="chart_ktx"] tr.chart_train:nth-last-child(2) td {
+    padding-top: 10px;
+    border-top: 4px solid #464e57;
+}
+table[class*="chart_ktx"] tr.chart_train:last-child td {
+    height: 33px;
+    vertical-align: middle;
+    border-bottom: 2px solid #464e57;
+}
+table[class*="chart_ktx"] tr.chart_table_plan td {
+    color: #4f5355;
+}
+table[class*="chart_ktx"] tr:nth-child(1) td,
+table[class*="chart_ktx"] tr:nth-child(2) td,
+table[class*="chart_ktx"] tr:nth-child(3) td,
+table[class*="chart_ktx"] tr:nth-child(4) td,
+table[class*="chart_ktx"] tr:nth-child(5) td {
+    border-right: 1px solid #dcdfe3;
+}
+
+table[class*="chart_ktx"] tr.chart_table_title td,
+table[class*="chart_ktx"] tr.chart_table_plan td,
+table[class*="chart_ktx"] tr.chart_table_result td {
+    border-top: 2px solid #464e57;
+}
+
+table[class*="chart_ktx"] tr.chart_table_title {
+    background: #f3f4f5;
+}
+table[class*="chart_ktx"] tr.chart td {
+    height: 235px;
+    vertical-align: bottom;
+}
+
+table[class*="chart_ktx"] tr.chart td div[class*="chart_bar_"] {
+    width: 16px;
+    position: relative;
+    display: inline-block;
+    vertical-align: bottom;
+}
+table[class*="chart_ktx"] tr.chart td div[class*="chart_bar_"] span {
+    font-size: 8px;
+    color: #9b9ea0;
+    display: block;
+    margin-top: -13px;
+    margin-left: -1px;
+}
+table[class*="chart_ktx"] tr.chart td div.chart_bar_plan {    
+    background: #d8dce0;
+}
+table.chart_ktx13 tr.chart td div.chart_bar_result {
+     background: #279ddb;
+}
+table.chart_ktx37 tr.chart td div.chart_bar_result {
+    background: #f7b22e;
+}
+
+/* mtr3 */
+.mtr_flow_container h1,
+.mtr_flow_container span.h1 {
+     font-size: 80px;
+}
+.mtr_flow_container h1 {
+    margin-top: 55px;
+    font-weight: 900;
+    display: inline-block;    
+}
+.mtr_flow_container span.h1 {
+    font-weight: 300;
+    color: #353839;
+}
+.mtr_flow_container p.now,
+.mtr_flow_container p.goal {
+    font-size: 35px;
+    font-weight: 500;
+}
+.mtr_flow_container p.now {
+    float: left;
+}
+.mtr_flow_container p.goal {
+    float: right;
+}
+.mtr_flow_bar {
+    width: 100%;
+    background: #353839;
+}
+.mtr_flow_bar .mtr_flow_bar_per {
+    background: #35a3dc;
+    height: 10px;
+}
+div[class*="flow_chart_"] div[class*="blue"] table tr td.title { color: #0880be; }
+div[class*="flow_chart_"] div[class*="red"] table tr td.title { color: #ce1742; }
+div[class*="flow_chart_"] div[class*="gray"] table tr td.title { color: #353839; }
+
+.flow_chart_1 {
+    margin-top: 45px;
+}
+.flow_chart_1 > div[class*="flow_"],
+.flow_chart_2 > div[class*="flow_"] {
+    float: left;
+    margin-top: 20px;    
+}
+.flow_chart_3 > div[class*="flow_"] {
+    margin-left: 695px;
+    margin-top: -140px;
+}
+.flow_chart_3 > div[class*="flow_"] table {
+    position: absolute;
+}
+.flow_chart_4 > div[class*="flow_"] {
+    float: right;
+    margin-top: -32px;
+}
+
+div[class*="flow_chart_"] div[class*="flow_"] table tr td {
+    width: 49px;
+    height: 21.5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+    color: #fff;
+}
+div[class*="flow_chart_"]::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+div[class*="flow_chart_"] div[class*="flow_right_"],
+div[class*="flow_chart_"] div[class*="flow_left_"] {
+    width: 173px;
+    height: 65px;    
+}
+
+div[class*="flow_chart_"] div[class*="flow_right_"] table {
+    float: left;
+}
+div[class*="flow_chart_"] div[class*="flow_left_"] table {
+    float: right;
+}
+
+div[class*="flow_chart_"] .flow_right_blue {
+    background-image: url('../images/flow_right_blue.png');    
+}
+div[class*="flow_chart_"] .flow_right_red {
+    background-image: url('../images/flow_right_red.png');    
+}
+div[class*="flow_chart_"] .flow_right_gray {
+    background-image: url('../images/flow_right_gray.png');    
+}
+
+div[class*="flow_chart_"] .flow_left_blue {
+    background-image: url('../images/flow_left_blue.png');    
+}
+div[class*="flow_chart_"] .flow_left_red {
+    background-image: url('../images/flow_leftt_red.png');    
+}
+div[class*="flow_chart_"] .flow_left_gray {
+    background-image: url('../images/flow_left_gray.png');    
+}
+div[class*="flow_chart_"] div[class*="flow_right_3_"] {
+    width: 348px;
+    height: 183px;
+    position: absolute;
+    margin-left: 347px;
+    margin-top: -37px;    
+}
+div[class*="flow_chart_"] div[class*="flow_right_3_"] table {
+    margin-top: 57px;    
+}
+div[class*="flow_chart_"] .flow_right_3_blue {
+    background-image: url('../images/flow_arrow_3_blue.png');    
+}
+div[class*="flow_chart_"] .flow_right_3_red {
+    background-image: url('../images/flow_arrow_3_red.png');    
+}
+div[class*="flow_chart_"] .flow_right_3_gray {
+    background-image: url('../images/flow_arrow_3_gray.png');
+}
+div[class*="flow_chart_"] .flow_long_blue {
+    background-image: url('../images/flow_long_blue.png');
+}
+div[class*="flow_chart_"] .flow_long_red {
+    background-image: url('../images/flow_long_red.png');
+}
+div[class*="flow_chart_"] .flow_long_gray {
+    background-image: url('../images/flow_long_gray.png');
+}
+div[class*="flow_chart_"] div[class*="flow_long_"] {
+    width: 166px;
+    height: 227px;
+}
+div[class*="flow_chart_"] div[class*="flow_center_"] {
+    width: 149px;
+    height: 65px;
+}
+div[class*="flow_chart_"] .flow_center_blue {
+    background-image: url('../images/flow_center_blue.png');
+}
+div[class*="flow_chart_"] .flow_center_red {
+    background-image: url('../images/flow_center_red.png');
+}
+div[class*="flow_chart_"] .flow_center_gray {
+    background-image: url('../images/flow_center_gray.png');
+}
+
+.flow_chart_table {
+    margin-top: 132px;
+}
+.flow_chart_table table {
+    width: 100%;
+}
+.flow_chart_table table tr td {
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #464e57;
+    border-right: 1px solid #dcdfe3;
+}
+.flow_chart_table table tr:first-child td,
+.flow_chart_table table tr:nth-child(2) td {
+    background: #f3f4f5;
+    border-bottom: 2px solid #464e57;
+}
+.flow_chart_table table tr td.point1 {
+    background: #7360e3;
+}
+.flow_chart_table table tr td.point2 {
+    background: #36a7bb;
+}
+.flow_chart_table table tr td[class*="point"] {
+    color: #fff;
+}
+
+/* mtr 4 */
+.mtr_map_container .mtr_map {
+    width: 100%;
+    height: 824px;
+    margin-top: 93px;
+    margin-bottom: 109px;
+    background-image: url('../images/mtr_map.jpg');
+    position: relative;
+}
+.mtr_map_container .mtr_map div[class*="ball_"] {
+    position: absolute;;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+.mtr_map_container .mtr_map .ball_green {
+    background-image: url('../images/mtr_map_green.png');
+}
+.mtr_map_container .mtr_map .ball_blue {
+    background-image: url('../images/mtr_map_blue.png');
+}
+.mtr_map_container .mtr_map .ball_orange {
+    background-image: url('../images/mtr_map_orange.png');
+}
+.mtr_map_container .mtr_map .ball_red {
+    background-image: url('../images/mtr_map_red.png');
+}
+
+#map_popup {
+    position: relative;
+    margin-left: 770px;
+    margin-top: -703px;
+    width: 350px;
+    height: 313px;
+    background-color: #e5e6f0;
+    display: none;
+}
+#map_popup > h2 {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 17px;
+}
+#map_popup > table {
+    margin: 0 auto;
+}
+#map_popup table tr td {
+    height: 35px;
+}
+#map_popup table tr:first-child td,
+#map_popup table tr:last-child td {
+    border-bottom: 2px solid #464e57;
+}
+#map_popup table tr td {
+    border-bottom: 1px solid #464e57;
+}
+#map_popup table tr td:first-child {
+    background: #7360e3;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    width: 128px;
+}
+#map_popup table tr td:last-child {
+    text-align: left;
+    padding-left: 10px;
+    width: 182px;
+    background: #fff;
+    color: #353839;
+}
+button.popup_close {
+    width: 65px;
+    height: 25px;
+    background-color: #6d7174;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0 0 144px;
+}

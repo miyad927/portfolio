@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>설비점검표 발행</title>
+    <link rel="stylesheet" type="text/css" href="css/contents.css" />
+    <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <style>        
+        .selector,
+        .day > ul > li {            
+            position:relative;
+            z-index: 10000;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        .selector {
+            padding-left: 7px;
+        }
+        .day > ul > li {
+            display: none;
+            padding: 7px;
+            border: 1px solid #ccc;
+        }
+        .day > ul > li:hover {
+            background-color: #dae6fa;
+        }
+    </style>
+</head>
+<script>
+    $(function(){
+        $(".day").prepend(
+            '<div class="selector"></div>'+
+            '<ul>'+
+                '<li class="circle"><img src="img/option_circle.png" alt="원" value="circle" /></li>'+
+                '<li class="square"><img src="img/option_square.png" alt="사각" value="square" /></li>'+
+                '<li class="triangle"><img src="img/option_triangle.png" alt="삼각" value="triangle" /></li>'+
+                '<li class="x"><img src="img/option_x.png" alt="엑스" value="x" /></li>'+
+            '</ul>'+
+            '<input type="text" value="30">'            
+        );
+        $(".selector").html($(".day li:first-child").html());
+        $(".selector").on('click',function(){            
+            $(".day li").css("display", "none");
+            $(".selector").css("border", "0");
+            $(this).css("border", "1px solid #ccc");
+            $(this).siblings("ul").children("li").css("display","block");
+            $(this).siblings("ul").children("li").on('click', function(){
+                $(this).parents().siblings(".selector").html($(this).html());
+                $("li").css("display", "none");
+                $(".selector").css("border", "0");                
+            });
+        });        
+    });
+</script>
+<body>    
+    <div class="ep_container1">
+        <div id="layer_popup2">
+            <div class="title">
+                <div class="btnClose" onclick="window.close();"><img src="img/btn_popup_close.gif" alt="닫기" /></div>
+                <span>설비점검표 발행</span>
+            </div>
+            <div class="con">
+                <div class="table_img">
+                    <div class="day" style="left: 59px; top: 196px;"></div>
+                    <div class="day" style="left: 129px; top: 196px;"></div>                    
+                    <div class="day" style="left: 200px; top: 196px;"></div>
+                    <div class="day" style="left: 271px; top: 196px;"></div>
+                    <div class="day" style="left: 342px; top: 196px;"></div>
+                    <div class="day" style="left: 413px; top: 196px;"></div>
+                    <div class="day" style="left: 484px; top: 196px;"></div>
+                </div>
+                <table class="list">
+                    <tbody>
+                        <tr>
+                            <th>기계번호</th>
+                            <td colspan="2">90009276</td>
+                        </tr>
+                        <tr>
+                            <th>기계명</th>
+                            <td colspan="2">차상장치시험기</td>
+                        </tr>
+                        <tr>
+                            <th>기간</th>
+                            <td colspan="2">2018.10</td>
+                        </tr>
+                        <tr>
+                            <th>(재)발행일시</th>
+                            <td>2018.10.22 17:22:33</td>
+                            <td style="text-align:right; width:90px;"><button><img src="img/icon_down_on.gif" alt="" style="padding-right:7px;">다운로드</button></td>
+                        </tr>                        
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>
+                                <button>재발행</button>
+                            </td>
+                            <td colspan="2" style="width:136px; text-align:right;">
+                                <button>양식생성요청</button> <button>닫기</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/contents.css" />
+    <script type="text/javascript" src="js/jquery-3.2.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('div[class^="ball_"]').click(function () {
+                $('#map_popup').show();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="pop_title">
+        <img src="images/pop_title.png" alt="KORAIL 고속차량 중정비 공정관리시스템">
+    </div>
+    <div class="mtr_map_container">
+        <div class="mtr_map">
+            <div class="ball_blue" style="left: 434px; top: 228px;"></div>
+            <div class="ball_green" style="left: 550px; top: 318px;"></div>
+            <div class="ball_blue" style="left: 478px; top: 402px;"></div>
+            <div class="ball_blue" style="left: 478px; top: 433px;"></div>
+            <div class="ball_blue" style="left: 314px; top: 570px;"></div>
+            <div class="ball_orange" style="left: 436px; top: 569px;"></div>
+            <div class="ball_blue" style="left: 477px; top: 569px;"></div>
+            <div class="ball_orange" style="left: 556px; top: 569px;"></div>
+            <div class="ball_red" style="left: 951px; top: 456px;"></div>
+            <div class="ball_blue" style="left: 1317px; top: 477px;"></div>
+            <div class="ball_blue" style="left: 1119px; top: 675px;"></div>
+            <div class="ball_blue" style="left: 1235px; top: 675px;"></div>
+            <div class="ball_blue" style="left: 1119px; top: 743px;"></div>
+            <div class="ball_blue" style="left: 1235px; top: 743px;"></div>
+            <div class="ball_blue" style="left: 1463px; top: 644px;"></div>
+            <div class="ball_blue" style="left: 1463px; top: 774px;"></div>
+        </div>
+    </div>
+    <div id="map_popup">
+        <h2>설비가동현황</h2>
+        <table>
+            <tr>
+                <td>설비명</td>
+                <td>트레버스 1호기</td>
+            </tr>
+            <tr>
+                <td>설비상태</td>
+                <td>가동</td>
+            </tr>
+            <tr>
+                <td>시작시간</td>
+                <td>2017.10.19 10:00</td>
+            </tr>
+            <tr>
+                <td>작업자</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>점검시간</td>
+                <td>2017.10.19 09:50</td>
+            </tr>
+            <tr>
+                <td>점검결과</td>
+                <td>양호</td>
+            </tr>
+        </table>
+        <button class="popup_close" onclick="$('#map_popup').hide();">닫기</button>
+    </div>
+</body>
+</html>

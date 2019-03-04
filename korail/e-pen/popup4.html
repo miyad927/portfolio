@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>전자펜데이터 보정</title>
+    <link rel="stylesheet" type="text/css" href="css/contents.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("div[class*='pen_tab']").tabs();
+            $("table[class='pen_tab1']").addClass("on");
+            function imgTab() {
+                $("a[href*='tabs-']").removeClass("on");
+                $("a[href='#tabs-1']").addClass("on");
+                $("a[href*='tabs-']").on("click", function(){
+                    $("a[href*='tabs-']").removeClass("on");
+                    $(this).addClass("on");
+                });
+            };
+            imgTab();
+            $("table[class*='pen_tab']").on("click", function() {
+                var thisCls = $(this).attr("class");
+                $("div[class*='pen_tab']").css("display", "none");
+                $("div." + thisCls).css("display", "block");
+                $("table[class*='pen_tab']").removeClass("on");
+                $("table." + thisCls).addClass("on");
+                imgTab();
+            });            
+        });
+    </script>
+    <style>
+        input[type="radio"] { margin-left: 19px; }    
+        input[type="checkbox"] { margin-left: 19px; }
+    </style>
+</head>
+<body>    
+    <div class="ep_container4">
+        <div id="layer_popup2">
+            <div class="title">
+                <div class="btnClose" onclick="window.close();"><img src="img/btn_popup_close.gif" alt="닫기" /></div>
+                <span>전자펜데이터 보정</span>
+            </div>
+            <div class="con">
+                <div class="list">
+                    <div id="table_con">                        
+                            <table class="pen_tab1">
+                                <tr>
+                                    <th>설비점검표</th>
+                                    <td>
+                                        <p>대상월</p>2018-10
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><p>설비명</p>차상장치시험기</td>
+                                    <td><p>설비번호</p>90009276</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2"><p>최종작성일시</p>2018.10.02 17:23:34</td>
+                                </tr>
+                            </table>
+                        <table class="pen_tab2">
+                                <tr>
+                                    <th>공정진행현황</th>
+                                    <td>
+                                        <p>편성</p>KTX-37
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td rowspan="2">
+                                        <p>공정</p>편성분리
+                                    </td>
+                                    <td>
+                                        <p>팀</p>편성분리팀
+                                    </td>
+                                </tr>
+                                <tr>                                
+                                    <td>
+                                        <p>작업조</p>기계설비
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <p>최종작성일시</p>2018.10.02 16:41:41
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="pen_tab3">
+                                <tr>
+                                    <th>시리얼번호표</th>
+                                    <td>
+                                        <p>편성</p>KTX-37
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <p>팀</p>기계설비
+                                    </td>
+                                    <td>
+                                        <p>작업조</p>기계설비
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <p>최종작성일시</p>2018.10.02 15:11:04
+                                    </td>
+                                </tr>
+                            </table>                            
+                    </div>
+                </div><!-- End list-->
+                <div class="tab_img">
+                    <div class="pen_tab1">
+                        <div id="tabs-1" style="background-image:url('img/table4-1.jpg');">
+                            <form style="position: absolute; left: 533px; top: 154px;">
+                                <fieldset>
+                                    <input type="radio" name="radio" checked="checked" />
+                                    <input type="radio" name="radio" />
+                                    <input type="radio" name="radio" />
+                                    <input type="radio" name="radio" />
+                                </fieldset>
+                            </form>
+                            <form style="position: absolute; left: 747px; top: 154px;">
+                                <fieldset>
+                                    <input type="checkbox" name="check" checked="checked" />
+                                    <input type="checkbox" name="check" />
+                                    <input type="checkbox" name="check" />
+                                    <input type="checkbox" name="check" />
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div id="tabs-2" style="background-image:url('img/table4-2.jpg');"></div>
+                        <div id="tabs-3" style="background-image:url('img/table4-3.jpg');"></div>
+                        <div id="tabs-4" style="background-image:url('img/table4-4.jpg');"></div>
+                        <div id="tabs-5" style="background-image:url('img/table4-5.jpg');"></div>
+                        <ul>
+                            <li><a href="#tabs-1">1</a></li>
+                            <li><a href="#tabs-2">2</a></li>
+                            <li><a href="#tabs-3">3</a></li>
+                            <li><a href="#tabs-4">4</a></li>
+                            <li><a href="#tabs-5">5</a></li>
+                        </ul>
+                    </div>
+                    <div class="pen_tab2">                    
+                        <div id="tabs-1" style="background-image:url('img/table4-1.jpg');"></div>
+                        <div id="tabs-2" style="background-image:url('img/table4-2.jpg');"></div>
+                        <div id="tabs-3" style="background-image:url('img/table4-3.jpg');"></div>
+                        <div id="tabs-4" style="background-image:url('img/table4-4.jpg');"></div>
+                        <div id="tabs-5" style="background-image:url('img/table4-5.jpg');"></div>
+                        <div id="tabs-6" style="background-image:url('img/table4-6.jpg');"></div>
+                        <div id="tabs-7" style="background-image:url('img/table4-7.jpg');"></div>
+                        <div id="tabs-8" style="background-image:url('img/table4-8.jpg');"></div>
+                        <div id="tabs-9" style="background-image:url('img/table4-9.jpg');"></div>
+                        <div id="tabs-10" style="background-image:url('img/table4-10.jpg');"></div>
+                        <ul>
+                            <li><a href="#tabs-1">1</a></li>
+                            <li><a href="#tabs-2">2</a></li>
+                            <li><a href="#tabs-3">3</a></li>
+                            <li><a href="#tabs-4">4</a></li>
+                            <li><a href="#tabs-5">5</a></li>
+                            <li><a href="#tabs-6">6</a></li>
+                            <li><a href="#tabs-7">7</a></li>
+                            <li><a href="#tabs-8">8</a></li>
+                            <li><a href="#tabs-9">9</a></li>
+                            <li><a href="#tabs-10">10</a></li>
+                        </ul>
+                    </div>
+                    <div class="pen_tab3">
+                        <div id="tabs-1" style="background-image:url('img/table4-1.jpg');"></div>
+                        <div id="tabs-2" style="background-image:url('img/table4-2.jpg');"></div>
+                        <div id="tabs-3" style="background-image:url('img/table4-3.jpg');"></div>
+                        <div id="tabs-4" style="background-image:url('img/table4-4.jpg');"></div>
+                        <div id="tabs-5" style="background-image:url('img/table4-5.jpg');"></div>
+                        <ul>
+                            <li><a href="#tabs-1">1</a></li>
+                            <li><a href="#tabs-2">2</a></li>
+                            <li><a href="#tabs-3">3</a></li>
+                            <li><a href="#tabs-4">4</a></li>
+                            <li><a href="#tabs-5">5</a></li>
+                        </ul>
+                    </div>                    
+                </div><!-- End img_tab-->
+                <div class="btn_bottom">                        
+                    <table>
+                        <colgroup>
+                            <col width="424px" />
+                            <col width="70px" />
+                            <col width="180px" />
+                            <col width="180px" />
+                            <col width="47px" />
+
+                        </colgroup>
+                        <tr>
+                            <td><button style="width: 362px;">더보기</button></td>
+                            <td style="text-align:left;">
+                                <button>원본보기</button>
+                            </td>
+                            <td style="text-align:left;">
+                                <button>삭제</button>
+                            </td>
+                            <td style="text-align:right;">
+                                <button>PMS등록</button>
+                            </td>
+                            <td style="text-align:right;">
+                                <button>닫기</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div><!-- End con-->
+        </div>
+    </div>
+</body>
+</html>
